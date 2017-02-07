@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+}
+body {
+    background: #fff;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-weight: 400;
+    color: #aaaaaa;
+    line-height: 1.75em;
+}
+
+.profileImage {
+    border-radius: 50%;
+}
+.LeftContent {
+    background-image: url("bg3.jpg");
+    background-size: cover;
+
+    position: fixed; 
+
+    top: 0;
+    left: 0;
+
+    text-align: right;
+    line-height: 60px;
+
+    height: 100%;
+    width: 30%;
+    padding-right: 5%;
+    padding-top: 200px;
+}   
+
+#sidebarName {
+    font-size: 50pt;
+    font-weight: bold;
+    line-height: 100px;
+    color: #fff;
+}
+
+#sidebarDesc {
+
+}
+
+
+.RightContent {
+    top: 0;
+    left: 0;
+
+    margin-left: 35%;
+    margin-top: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: #fff;
+    height: 100%;
+
+    font-size: 24px;
+    line-height: 120%;
+}
+
+.Wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+#quote {
+    line-height: 150%;
+    font-size: 42px;
+}
+
+#quoteAuthor {
+    text-align: right;
+    font-size: 30px;
+}
+
+.rightText {
+    word-spacing: 1.5px;
+    line-height: 150%;
+}
+
+.roundButton {
+    border: none;
+    border-radius: 12px;
+    background-color: white;
+    color: #6d6d6d;
+    border: 2px solid #e7e7e7;
+    padding: 20px 42px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    width: 120px;
+}
+
+.roundButton:hover {
+    background-color: #e7e7e7; /* Green */
+    color: #6d6d6d;
+}
+
+.linkButtons{
+    text-align: center;
+    word-spacing: 60px;
+}
+
+.horizontalDivider{
+    background-color: #a3a3a3; 
+}
+
+.projectGrid{
+
+}
+
+.project{
+    display: inline-block;
+    margin: 0 0 0 0;
+    width: 49%;
+    vertical-align: top;
+    text-align: justify;
+}
+
+.projectImage{
+    width: 100%;
+    top: 0;
+}
+
+.projectName{
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.projectDesc{
+
+}
+/*
+
+*{margin: 0; padding: 0; border: 0; outline: 0;}
+
+*/
