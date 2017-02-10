@@ -42,7 +42,7 @@
 
                 <img class="postImage" src="goldMinesBlacked.png" alt="Img"></img>
 
-                <p>Looks good! The step was to build the actual bot. I tested out a few different Android emulators on the web, namely Bluestacks, Nox, and Andy. Nox had the most flexibility in terms of rendering options, and turned out to be the fastest running and most stable. Written in C++, the bot was just a state machine that hooked onto the Nox App Player window using the Windows API. I then wrote a class to simulate click events and button presses within the emulator. 
+                <p>Looks good! The next step was to build the actual bot. I tested out a few different Android emulators on the web, namely Bluestacks, Nox, and Andy. Nox had the most flexibility in terms of rendering options, and turned out to be the fastest running and most stable. The bot was written in C++, and contained a state machine that hooked onto the Nox App Player window using the Windows API. I then wrote a class to simulate click events and button presses within the emulator. 
                 </p>
 
                 <p>At runtime, the bot transitions through states from training troops, searching for a base, finding gold mines, raiding, etc. Finding good bases took another layer of work. On every base, the bot clips a snapshot of the loot potential for each base, and runs the Tesseract optical character recognition engine on the image. The result gave characters that it guessed from the on-screen text.
@@ -53,14 +53,19 @@
                 <p>One of the most annoying struggles was trying to get the OCR engine to correctly parse the Clash of Clans font. Sometimes it would mix up numbers, like confusing 5's and 6's, which meant the gold numbers were occasionally incorrect. After some testing, I was able to tweak the algorithm with training screenshots that I labeled by hand, and that significantly improved its accuracy.
                 </p>
 
-                <p>After solving the problem of finding good raid targets, the next leap was attacking the base. The other bots that I tried didn't have the advantage of knowing where each gold mine was. By plugging in the "gold mine finder" from above, I could get a list of precise pixel coordinates of each gold mine in the base. Using that information, the bot was able to deploy troops efficiently around only the gold mines, and not waste time or resources on guessing. Here's a quick demo of what it looked like.
+                <p>After solving the problem of finding good raid targets, the next leap was actually attacking the base. The other bots that I tried didn't have the advantage of knowing where each gold mine was. By plugging in the gold mine finder from above, I could get a list of precise pixel coordinates of each gold mine in the base. Using that information, the bot was able to deploy troops efficiently around only the gold mines, and not waste time or resources on guessing. Here's a quick demo of what it looked like.
                 </p>
 
                 <iframe width="600" height="338" src="https://www.youtube.com/embed/f9siu5KX0tc" frameborder="0" allowfullscreen></iframe>
 
-                <p>The video was recorded in bronze league, so deploying a circle of goblins around each gold mine was usually sufficient. For attacking in higher leagues, it was better to use barbarians/archers, or some mix with giants depending on where the gold mines were detected.
+                <p>The video was recorded in bronze league, so deploying a circle of goblins around each gold mine was usually successful enough. For attacking in higher leagues, it was better to use barbarians/archers, or some mix with giants depending on where the gold mines were detected.
                 </p>
-                <aside name="dive"><p></p></aside>
+
+                <p>As for the payoff, in the ~2<span name="minute"></span> minute long video, the bot earned a net of about 700,000 resources. I would just leave the bot on overnight, or keep it running while I was in class, and return home to overflowing gold storages. I didn't have to waste a single<span name="waste"></span> minute raiding manually.
+                </p>
+
+                <aside name="minute"><p>Actually the video is sped up a bit because it was boring to sit and watch raids, but don't tell anyone.</p></aside>
+                <aside name="waste"><p>Disclaimer: Minutes spent debugging and fighting the OCR engine not included. </p></aside>
 
             </div>
         </div>
