@@ -6,7 +6,7 @@
 
         <link rel="stylesheet" type="text/css" href="poststyle.css" />
         <script src="jquery-1.10.1.min.js"></script>
-        <script src="script.js"></script>
+        <script src="asideScript.js"></script>
     </head>
 
     <body id="top">
@@ -45,7 +45,7 @@
                 <p>Looks good! The next step was to build the actual bot. I tested out a few different Android emulators on the web, namely Bluestacks, Nox, and Andy. Nox had the most flexibility in terms of rendering options, and turned out to be the fastest running and most stable. The bot was written in C++, and contained a state machine that hooked onto the Nox App Player window using the Windows API. I then wrote a class to simulate click events and button presses within the emulator. 
                 </p>
 
-                <p>At runtime, the bot transitions through states from training troops, searching for a base, finding gold mines, raiding, etc. Finding good bases took another layer of work. On every base, the bot clips a snapshot of the loot potential for each base, and runs the Tesseract optical character recognition engine on the image. The result gave characters that it guessed from the on-screen text.
+                <p>At runtime, the bot transitions through states from training troops, searching for a base, finding gold mines, raiding, etc. Finding good bases took another layer of work. On every base, the bot clips a snapshot of the loot potential for the base, and runs the Tesseract optical character recognition engine on the image. It outputs a guess of what the characters the screenshot contained.
                 </p>
 
                 <img class="postImage" src="ocr.png" alt="Img"></img>

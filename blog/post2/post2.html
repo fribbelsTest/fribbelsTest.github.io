@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+        <title>three.js</title>
+
+        <link rel="stylesheet" type="text/css" href="../poststyle.css" />
+        <script src="../jquery-1.10.1.min.js"></script>
+        <script src="../asideScript.js"></script>
+    </head>
+
+    <body id="top">
+        <div class="page sidebar">
+            <div class="content">
+                <h1>Learning three.js</h1>
+
+                <!-- <span name="label"></span> -->
+                <!-- <aside name="label"><p>Text.</p></aside> -->
+                <img class="postImage" src="../defaultBanner.png" alt="Img"></img>
+                    
+                <p>This week I'm working on some visualization using three.js. I was inspired by an example of minimalistic flocking birds, and I'm going to try and recreate it without looking at their source.
+                </p>
+
+                <p>Step one, let's figure out how to display geometry on the screen. It looks like you can specify vertices and faces, and add them to a mesh to render. I set up the the initial bird<span name="airplane"></span> prototype with triangles.</p>
+
+                <aside name="airplane">Looks more like a paper airplane but bare with me.</aside>
+                <img class="postImage" src="bird.png" alt="Img"></img>
+
+                <p>Now that there's one bird, we just need MORE. I created 100 bird meshes and placed them in random positions on the screen. The birds rotation euler values can be set to random numbers between 0-360 to specify a random rotation.
+                </p>
+
+                <img class="postImage" src="manybirds.png" alt="Img"></img>
+            </div>
+        </div>
+    </body>
+</html>
