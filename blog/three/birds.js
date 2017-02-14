@@ -6,7 +6,7 @@ var camera   = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHei
 var renderer = new THREE.WebGLRenderer({ antialias: true });
 
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor(0x3399ff);
+renderer.setClearColor(0x69d3d0);
 document.body.appendChild(renderer.domElement);
 
 bodyMaterial = new THREE.MeshBasicMaterial({color: 0x0d7212, side: THREE.DoubleSide});
