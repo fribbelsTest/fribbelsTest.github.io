@@ -61,9 +61,16 @@ a {
 img {
   max-width: 100%;
   border: solid 1px #f6f4ee;
-  border-radius: 8px; 
+  border-radius: 7px; 
   display: block;
   margin: auto;
+}
+
+video {
+  width: 600px;
+  border-radius: 7px; 
+  margin: 0 auto;
+  display: block;
 }
 
 code {
@@ -83,12 +90,15 @@ aside {
   background: #faf8f5;
   border: solid 1px #f7f4ed;
   border-bottom: solid 1px #f0e9db;
-  border-radius: 3px; }
-  aside > p:first-child {
-    margin-top: 0; }
-  aside > p:last-child {
-    margin-bottom: 0; 
-  }
+  border-radius: 3px; 
+  line-height: 20px;
+  font-size: 15px;
+}
+aside > p:first-child {
+  margin-top: 0; }
+aside > p:last-child {
+  margin-bottom: 0; 
+}
 
 aside + aside {
   margin-top: 10px; 

@@ -109,86 +109,10 @@ function render(){
                                               Math.random() * deg - deg/2,
                                               Math.random() * deg - deg/2);
             bird.lerpTo(randomRot);
-            // var rot = bird.getBird().rotation.toVector3() + new THREE.Vector3(Math.random() * deg - deg/2,
-            //                                                                   Math.random() * deg - deg/2,
-            //                                                                   Math.random() * deg - deg/2);
-            // bird.rot = rot;
         }
         bird.rotate();
-
-        // bird.setRotationFromEuler(bird.rotation + new THREE.Vector3(Math.random() * deg - deg/2,
-        //                                                             Math.random() * deg - deg/2,
-        //                                                             Math.random() * deg - deg/2));
     }
 
     renderer.render(scene, camera);
 }
 render();
-
-/*
-// Set up screen
-var width = window.innerWidth;
-var height = window.innerHeight;
-
-var renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(width, height);
-document.body.appendChild(renderer.domElement);
- 
-var scene = new THREE.Scene;
-
-// Make cube
-var cubeGeometry = new THREE.CubeGeometry(100, 100, 100);
-var cubeMaterial = new THREE.MeshLambertMaterial({ color: 0x1ec876 });
-var cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-cube.rotation.y = Math.PI * 45 / 180;
- 
-scene.add(cube);
-
-// Add triangle
-
-var geometry = new THREE.Geometry();
-var v1 = new THREE.Vector3(0,0,0);
-var v2 = new THREE.Vector3(10,0,0);
-var v3 = new THREE.Vector3(0,10,0); 
-
-geometry.vertices.push(v1);
-geometry.vertices.push(v2);
-geometry.vertices.push(v3);
-
-scene.add(geometry)
-
-// Add camera
-var camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
-camera.position.y = 160;
-camera.position.z = 400;
-
-scene.add(camera);
-
-// Add skybox
-var skyboxGeometry = new THREE.CubeGeometry(10000, 10000, 10000);
-var skyboxMaterial = new THREE.MeshBasicMaterial({ color: 0x000000, side: THREE.BackSide });
-var skybox = new THREE.Mesh(skyboxGeometry, skyboxMaterial);
- 
-scene.add(skybox);
-
-// Add light
-var pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(0, 300, 200);
- 
-scene.add(pointLight);
-
-// Render
-camera.lookAt(cube.position);
-
-var clock = new THREE.Clock;
-renderer.setClearColor(0xBBBBBB);
-
-function render() {
-    renderer.render(scene, camera);
-    cube.rotation.y -= clock.getDelta();
-
-    requestAnimationFrame(render);
-}
- 
-render();
-*/
