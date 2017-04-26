@@ -74,14 +74,9 @@ video {
 }
 
 code {
-  color: #526d7a;
-  font: normal 16px "Source Code Pro", Menlo, Consolas, Monaco, monospace;
-  white-space: nowrap; 
+  font: normal 15px "Source Code Pro", Menlo, Consolas, Monaco, monospace;
 }
 
-a code {
-  color: #1481b8; 
-}
 
 
 aside {
